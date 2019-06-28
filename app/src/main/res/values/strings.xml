@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">CallbackMethod_Send_Value_From_Fragment_To_Activity</string>
+    <string name="hint_firstName">First Name</string>
+    <string name="hint_lastName">Last Name</string>
+    <string name="hint_age">Age</string>
+    <string name="button_text_sendToActivity">Send Data To Activity</string>
+    <string name="button_text_showFragment">Show Fragment</string>
 </resources>
