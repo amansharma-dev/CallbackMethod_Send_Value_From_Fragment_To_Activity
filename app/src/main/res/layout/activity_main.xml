@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <FrameLayout
         android:id="@+id/frame_container"
         android:layout_width="match_parent"
@@ -22,7 +21,7 @@
         android:layout_height="65dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="45dp"
+        android:layout_marginBottom="25dp"
         android:onClick="showFragment"
         android:text="@string/button_text_showFragment"/>
 

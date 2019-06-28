@@ -7,17 +7,22 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements DetailFragment.FragmentListener {
 
 
     public static final String TAG = "main_activity";
+
     private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
 
         button = findViewById(R.id.showFragmentBtn);
 
@@ -41,14 +46,18 @@ public class MainActivity extends AppCompatActivity implements DetailFragment.Fr
     public void sendValues(String fName, String lName, int age) {
         Log.i(TAG,"First Name:- "+fName+", Last Name:- "+lName+", Age:- "+age+".");
 
+
+        Toast.makeText(getApplicationContext(),fName+", "+lName+", "+age+".",Toast.LENGTH_LONG).show();
+
         Fragment fragment = getSupportFragmentManager().findFragmentByTag(TAG);
         if(fragment!=null) {
             getSupportFragmentManager()
                     .beginTransaction()
                     .remove(fragment)
                     .commit();
+
+            button.setVisibility(View.VISIBLE);
         }
 
-        button.setVisibility(View.VISIBLE);
     }
 }
